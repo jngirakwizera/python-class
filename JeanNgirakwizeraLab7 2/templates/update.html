@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+<h1>Hangman Admin Pages</h1>
+<h2>Update A Word</h2>
+<h3>{{errormsg}}</h3>
+<form action="update" method="POST">
+    <p>Search Word<input type="text" name="word"/></p>
+    <p><input type="submit" name="btn_id" value="Search"/></p>
+</form>
+<form action="update" method="POST">
+    <p>Hidden Word<input type="text" name="hiddenword" readonly value="{{word}}"/></p>
+    <p>Level<input type="text" name="level" value="{{level}}"/></p>
+    <p>Hint<input type="text" name="hint" value="{{hint}}"/></p>
+    <p>Update<input type="submit" name="btn_id" value="Update"/></p>
+</form>
+<a href="/">Home</a>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <h1>Hangman Admin Pages</h1>
+    <h2>Delete A Word</h2>
+     <form>
+        <p>Enter Word to Delete<input type="text" name="word"/></p>
+        <p>Delete<input type="submit" value="submit"/></p>
+    </form>
+    <hr>
+    <table>
+        <tr>
+        <th>Hiddenword</th>
+        <th>Level</th>
+        <th>Hint</th>
+        </tr>
+        {% for word in wordinfo %}
+        <tr><td>{{word[0]}}</td><td>{{word[1]}}</td><td>{{word[2]}}</td><td><a href="/delete/{{word[0]}}">Delete</a></td> </tr>
+        {% endfor %}
+    </table>
+    <hr>
+    <a href="/">Home</a>
+</body>
+</html>

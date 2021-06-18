@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <h1>Hangman Admin Pages -- Create a New Hidden Word</h1>
+    <h2>Add A Word</h2>
+    <form action="/add" method="POST">
+        <p>Word<input type="text" name="word"/></p>
+        <p>Hint<input type="text" name="hint"/></p>
+        <p><input type="submit" value="submit"/></p>
+    </form>
+    <hr>
+    <ul>
+        {% for word in wordinfo %}
+            <li>{{word}}</li>
+        {% endfor %}
+
+    </ul>
+    <a href="/">Home</a>
+</body>
+</html>
